@@ -67,6 +67,15 @@ Design Guideline
 | T09 | FortySecondsCV  | Minimal Academic Baseline |
 | T13 | Reactive Resume | Interactive Platform      |
 
+### Real-world Objects
+
+| ID  | Name            | Category                              |
+| --- | --------------- | ------------------------------------- |
+| R01 | Jitendra Malik  | Senior Researcher CV / Homepage       |
+| R02 | Fei-Fei Li      | Institutional Researcher Profile      |
+| R03 | Peter Norvig    | Text-first Personal Resume            |
+| R04 | Radford Neal    | Minimal Researcher Homepage           |
+
 ---
 
 ## Design Features
@@ -116,6 +125,10 @@ docs/
 
 ├── working_notes/
 ├── template_corpus/
+│   ├── T02_moderncv/
+│   │   ├── README.md
+│   │   └── CV.pdf
+│   └── ...
 ├── methodology.md
 └── design_guideline.md
 
@@ -125,6 +138,18 @@ templates/
 
 assets/
 ```
+
+Each corpus object uses one folder.
+
+```text
+docs/template_corpus/<ID_slug>/
+
+README.md          # introduction and analysis
+CV.pdf             # direct visual preview artifact
+showcase/          # source display assets and provenance notes
+```
+
+For template objects, `CV.pdf` should use an official sample whenever one is available. If the source only provides images, `CV.pdf` may be generated from those official images. Each `showcase/SOURCE.md` records the exact source and any limitations.
 
 ---
 
@@ -137,11 +162,13 @@ assets/
 * [x] Design feature framework
 * [x] Initial evaluation framework
 * [x] Initial template corpus
+* [x] Initial real-world researcher corpus
+* [x] Initial official showcase assets for template objects
 
 ### Ongoing
 
 * [ ] Expand template corpus
-* [ ] Introduce real-world researcher CVs
+* [ ] Broaden real-world researcher CV coverage
 * [ ] Refine evaluation framework
 * [ ] Build design guidelines
 
