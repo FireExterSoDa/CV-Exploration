@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# VSCode
+.vscode/
+
+# Generated PDFs
+*.pdf
+
+# LaTeX temporary files
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
